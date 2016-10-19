@@ -1,0 +1,36 @@
+begin mrbayes;
+log start filename=Arcticus_47_Sept20.log.txt;
+execute Arcticus_47_Sept20.nex;
+set autoclose=yes;
+	
+set autoclose=yes;
+	
+CHARSET ALL = 1-735;
+	CHARSET COI  =  1-735;
+	CHARSET COI_1st = 3-735\3;
+	CHARSET COI_2nd = 1-735\3;
+	CHARSET COI_3rd = 2-735\3;
+			
+	
+partition P3=3: COI_1st, COI_2nd, COI_3rd;
+	begin mrbayes;	
+	
+	
+	
+
+	set partition=P3;
+	lset applyto = (all)  nst=6 rates=invgamma;
+	unlink statefreq=(all) revmat=(all) shape=(all) pinvar=(all); 
+	prset applyto=(all) ratepr=variable;
+
+
+showmodel;
+
+
+
+mcmc ngen=30000000 samplefreq=1000 printfreq=1000 nchains=4 savebrlens=yes;
+sump relburnin=yes burninfrac=0.20;
+sumt relburnin=yes burninfrac=0.20
+conformat=simple;
+end;
+quit;
