@@ -15,4 +15,4 @@ An official citation for Venables, C. 2016. Molecular Systematics of the Agabina
  * The [BAMMtools](http://bamm-project.org/download.html) package
 
 ## Contact information
-Please direct any questions, problems, or bugs to the author, Chandra Venables, who can be contacted at c.venables<at>hotmail.com. Please ***DO NOT*** log an issue on this github webpage.
+Please direct any questions, problems, or bugs to the author, Chandra Venables, who can be contacted at c.venables `at` hotmail.com. Please ***DO NOT*** log an issue on this github webpage.
